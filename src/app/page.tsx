@@ -1,11 +1,8 @@
 "use client";
-import { useAppSelector } from "@/redux/app/store";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  // const isDarkThem = useAppSelector((state) => state.theme);
-  // console.log(isDarkThem);
   return (
     <>
       <div className="mt-24 flex p-4">
@@ -19,17 +16,17 @@ export default function Home() {
 
           <Link
             href="#"
-            className="bg-lightmode-primary/90 hover:bg-lightmode-primary mt-10 rounded-lg p-3 transition-all duration-300 hover:-translate-y-1 dark:bg-primary/90 dark:hover:bg-primary"
+            className="bg-lightmode-primary/90 hover:bg-lightmode-primary mt-10 rounded-lg p-3 transition-all duration-300 ease-in-out hover:-translate-y-1 dark:bg-primary/90 dark:hover:bg-primary"
           >
             Get Started
           </Link>
 
-          <div className="from-primary-20 to-primary-50 bg-gradient custom-pulse absolute bottom-5 left-10 h-[70%] w-[33%] rounded-full bg-gradient-to-bl from-primary/10 to-primary/20 blur-3xl"></div>
+          <div className=" from-primary-20 to-primary-50 bg-gradient custom-pulse absolute bottom-5 left-10 hidden h-[70%] w-[33%] rounded-full bg-gradient-to-bl from-primary/10 to-primary/20 blur-3xl dark:inline-block"></div>
         </div>
 
         <div className="relative h-[72vh] w-[50%]  px-24 py-2">
-          <div className=" h-full overflow-hidden rounded-xl p-4 ">
-            <div className="custom-pulse absolute left-0 right-0 -z-10 h-[60%] rounded-full bg-gradient-to-br from-primary/20 to-primary/30 blur-3xl"></div>
+          <div className="h-full overflow-hidden rounded-xl p-4 ">
+            <div className="custom-pulse absolute left-0 right-0 -z-10 hidden h-[60%] rounded-full bg-gradient-to-br from-primary/20 to-primary/30 blur-3xl dark:inline-block"></div>
 
             <Image
               src="/learning.svg"
@@ -41,10 +38,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="relative mb-10 flex h-60 justify-around px-8 text-text">
+      <div className="text-lightmode-text relative mb-10 flex h-60 justify-around px-8 dark:text-text">
         {Array.from({ length: 3 }).map((_, index) => (
           <div
-            className="relative z-10 w-[30%] cursor-pointer rounded-xl border border-primary/20 p-4 transition-all duration-300 hover:bg-primary/5"
+            className="border-lightmode-primary/20 hover:bg-lightmode-primary/20 relative z-10 w-[30%] cursor-pointer rounded-xl border p-4 transition-all duration-500 ease-in-out dark:border-primary/20 dark:duration-300 dark:hover:bg-primary/5"
             key={index}
           >
             <div className="relative flex items-center gap-3">
@@ -90,9 +87,9 @@ export default function Home() {
             </svg>
           </div>
         ))}
-        <div className=" custom-pulse top-15 absolute left-44 h-[60%] w-[30%] rounded-full bg-gradient-to-br from-primary/10 to-primary/20 blur-3xl"></div>
+        <div className="custom-pulse top-15 absolute left-44 hidden h-[60%] w-[30%] rounded-full bg-gradient-to-br from-primary/10 to-primary/20 blur-3xl dark:inline-block"></div>
 
-        <div className=" custom-pulse absolute -right-2 bottom-1 h-[60%] w-[30%] rounded-full bg-gradient-to-br from-primary/10 to-primary/20 blur-3xl"></div>
+        <div className="custom-pulse absolute  -right-2 bottom-1 hidden h-[60%] w-[30%] rounded-full bg-gradient-to-br from-primary/10 to-primary/20 blur-3xl dark:inline-block"></div>
       </div>
     </>
   );

@@ -18,7 +18,7 @@ export default function RootLayout({
     <ReduxProvider>
       <html lang="en" className="dark">
         <body
-          className={`${inter.className} bg-lightmode-background overflow-x-hidden dark:bg-background`}
+          className={`${inter.className} bg-lightmode-background overflow-x-hidden transition-all duration-75 dark:bg-background`}
         >
           <Navbar />
           {children}
