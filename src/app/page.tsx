@@ -15,7 +15,7 @@ export default function Home() {
 
           <Link
             href="#"
-            className="mt-10 rounded-lg bg-primary p-3 transition-all duration-300 hover:-translate-y-1"
+            className="mt-10 rounded-lg bg-primary/90 p-3 transition-all duration-300 hover:-translate-y-1 hover:bg-primary"
           >
             Get Started
           </Link>
@@ -40,7 +40,7 @@ export default function Home() {
       <div className="relative mb-10 flex h-60 justify-around px-8 text-text">
         {Array.from({ length: 3 }).map((_, index) => (
           <div
-            className="relative z-10 w-[30%] cursor-pointer rounded-xl border border-text/20 p-4 hover:bg-primary/5"
+            className="relative z-10 w-[30%] cursor-pointer rounded-xl border border-primary/20 p-4 hover:bg-primary/5"
             key={index}
           >
             <div className="relative flex items-center gap-3">

@@ -14,16 +14,12 @@ const config: Config = {
         primary: "#437DB6",
         secondary: "#e1bb85",
         accent: "#7BCE78",
+        "lightmode-text": "#080f16",
+        "lightmode-background": "#f4f6fa",
+        "lightmode-primary": "#4982bc",
+        "lightmode-secondary": "#dbce9e",
+        "lightmode-accent": "#7bce78",
       },
-      // keyframes: {
-      //   "custom-pulse": {
-      //     from: { opacity: 1 },
-      //     to: { opacity: 0 },
-      //   },
-      // },
-      // animation: {
-      //   "custom-pulse": "animate-pulse 5s ease-in-out infinite",
-      // },
     },
   },
   plugins: [],
