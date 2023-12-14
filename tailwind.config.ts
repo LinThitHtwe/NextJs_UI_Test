@@ -15,8 +15,18 @@ const config: Config = {
         secondary: "#e1bb85",
         accent: "#7BCE78",
       },
+      // keyframes: {
+      //   "custom-pulse": {
+      //     from: { opacity: 1 },
+      //     to: { opacity: 0 },
+      //   },
+      // },
+      // animation: {
+      //   "custom-pulse": "animate-pulse 5s ease-in-out infinite",
+      // },
     },
   },
   plugins: [],
 };
+
 export default config;
