@@ -1,9 +1,16 @@
+import { useAppDispatch } from "@/redux/app/store";
+import { changeTheme } from "@/redux/feature/theme/themeSlice";
 import Link from "next/link";
 import React from "react";
+import { useDispatch } from "react-redux";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
+  const dispatch = useAppDispatch();
+  const handleTheme = () => {
+    dispatch(changeTheme());
+  };
   return (
     <nav className="fixed left-0 right-0 top-0 flex h-14 items-center justify-between bg-gradient-to-b from-primary/5 to-transparent p-4 ">
       <h1 className="text-2xl font-semibold  tracking-widest text-primary">
@@ -22,6 +29,7 @@ const Navbar = (props: Props) => {
         <li className="hover:font-semibold hover:text-primary ">
           <Link href={"#"}>SignUp</Link>
         </li>
+        <li onClick={() => dispatch(changeTheme())}></li>
       </ul>
     </nav>
   );

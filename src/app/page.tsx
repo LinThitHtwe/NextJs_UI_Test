@@ -1,13 +1,17 @@
+"use client";
+import { useAppSelector } from "@/redux/app/store";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  // const isDarkThem = useAppSelector((state) => state.theme);
+  // console.log(isDarkThem);
   return (
     <>
       <div className="mt-24 flex p-4">
-        <div className="relative flex h-[55vh] w-[50%] flex-col items-center justify-center gap-3 text-text">
-          <h1 className="text-center text-7xl font-bold tracking-widest text-primary">
-            Learn<span className="text-text">Hub</span>
+        <div className="text-lightmode-text relative flex h-[55vh] w-[50%] flex-col items-center justify-center gap-3 dark:text-text">
+          <h1 className="text-lightmode-primary text-center text-7xl font-bold tracking-widest dark:text-primary">
+            Learn<span className="text-lightmode-text dark:text-text">Hub</span>
           </h1>
           <p className="tracking-normaln text-center text-base">
             Your Gateway to Infinite Knowledge
@@ -15,7 +19,7 @@ export default function Home() {
 
           <Link
             href="#"
-            className="mt-10 rounded-lg bg-primary/90 p-3 transition-all duration-300 hover:-translate-y-1 hover:bg-primary"
+            className="bg-lightmode-primary/90 hover:bg-lightmode-primary mt-10 rounded-lg p-3 transition-all duration-300 hover:-translate-y-1 dark:bg-primary/90 dark:hover:bg-primary"
           >
             Get Started
           </Link>
@@ -40,7 +44,7 @@ export default function Home() {
       <div className="relative mb-10 flex h-60 justify-around px-8 text-text">
         {Array.from({ length: 3 }).map((_, index) => (
           <div
-            className="relative z-10 w-[30%] cursor-pointer rounded-xl border border-primary/20 p-4 hover:bg-primary/5"
+            className="relative z-10 w-[30%] cursor-pointer rounded-xl border border-primary/20 p-4 transition-all duration-300 hover:bg-primary/5"
             key={index}
           >
             <div className="relative flex items-center gap-3">
